@@ -35,7 +35,7 @@ public class ApiWhatsappService {
                     .retrieve()
                     .body(String.class);
 
-            ObjectMapper obj = new ObjectMapper();
+            ObjectMapper obj = new ObjectMapper(); //convertir el string a un JSON
             return obj.readValue(response, ResponseWhastapp.class);
 
         } catch (RestClientException e) {
